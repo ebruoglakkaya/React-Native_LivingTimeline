@@ -20,7 +20,7 @@ function TimelineStack() {
 function Router() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator headerMode={false}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Timeline" component={TimelineStack} />
       </Stack.Navigator>
