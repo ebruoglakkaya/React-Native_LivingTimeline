@@ -6,7 +6,7 @@ const login_styles = StyleSheet.create({
   container: {
     flex: 1,
     margin: 5,
-    padding: 5,
+    padding: 10,
     borderRadius: 10,
     backgroundColor: '#ddd',
   },
