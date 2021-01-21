@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1029172991094",
+    "firebase_url": "https://rn-todoapp-1c324-default-rtdb.firebaseio.com",
+    "project_id": "rn-todoapp-1c324",
+    "storage_bucket": "rn-todoapp-1c324.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029172991094:android:75fa438e349fce0222fb57",
+        "android_client_info": {
+          "package_name": "com.week_5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029172991094-8ppu9bdebn7tsn0ak1rfmig29s45td9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_s4tzn28zoR_3gPzmmmlmnIUu2JwOglg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029172991094-8ppu9bdebn7tsn0ak1rfmig29s45td9l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1029172991094-ao3bnlkuot0po57jejien2e7q2tgmat0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.week-5"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
