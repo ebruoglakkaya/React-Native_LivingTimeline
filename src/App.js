@@ -1,9 +1,13 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
 
 function App() {
   // ...
-  return null;
+  return (
+    <SafeAreaView>
+      <Text>Proje Başlatıldı</Text>
+    </SafeAreaView>
+  );
 }
 
 export default App;
