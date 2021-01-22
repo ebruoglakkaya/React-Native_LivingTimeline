@@ -17,11 +17,20 @@ function TimelineStack() {
   );
 }
 
+function LoginStack(){
+  return(
+<Stack.Navigator headerMode={false}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Signup" component={Signup} />
+      </Stack.Navigator>
+  );
+}
+
 function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator headerMode={false}>
-        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="LoginStack" component={LoginStack} />
         <Stack.Screen name="Timeline" component={TimelineStack} />
       </Stack.Navigator>
     </NavigationContainer>
