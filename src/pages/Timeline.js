@@ -17,24 +17,24 @@ function Timeline() {
 
   useEffect(() => {
     database()
-      .ref(`${auth().currentUser.uid}`)
+    .ref(`/timeline`)
       .on('value', (snapshot) => {
         const data = snapshot.val();
 
         if (!data) {
           return;
         }
-        setTimelineArray(Object.values(data));
+        setTimelineArray(Object.values(data).sort((a, b) => (a.time < b.time) ? 1 : -1));
       });
   }, []);
 
   const renderTimeline = ({item}) => <TimelineCart item={item} />;
 
-  function addChat(todo) {
-    //https://rnfirebase.io/database/usage#writing-data
+  function addChat(chat) {
+    if (!chat) return;
     database()
-      .ref(`${auth().currentUser.uid}`)
-      .push({id: Math.random(), text: todo});
+      .ref(`/timeline`)
+      .push({id: Math.random(), text: chat , time:new Date().getTime()});
   }
 
   return (
