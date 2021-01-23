@@ -11,6 +11,12 @@ const timeline_styles=StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         flex:1,
+        marginVertical:10,
+        backgroundColor:'#00838f',
+        paddingVertical:10,
+        paddingHorizontal:5,
+        borderRadius:5,
+        alignItems:'center',
         
 
     },
@@ -18,12 +24,12 @@ const timeline_styles=StyleSheet.create({
         flexDirection:'row',
         flex:1,
         alignItems:'center',
-        justifyContent:'space-between',
+        justifyContent:'flex-start',
 
     },
     mail:{
-        paddingLeft:5,
-       
+        paddingLeft:20,
+        color:'white',
 
     },
     header_right:{
@@ -34,6 +40,10 @@ const timeline_styles=StyleSheet.create({
     text_container:{
 
     },
+    date:{
+        color:'white',
+        paddingRight:20,
+    }
 
 
 });

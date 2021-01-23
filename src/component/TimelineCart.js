@@ -12,12 +12,12 @@ export  function TimelineCart({item}) {
             <Icon
             name="all-inclusive"
             size={20}
-            color={'#00838f'}
+            color={'white'}
           />
           <Text style={timeline_styles.mail}>E-Mail</Text>
             </View>
             <View style={timeline_styles.header_right}>
-            <Text>Tarih</Text>
+            <Text style={timeline_styles.date}>Tarih</Text>
             </View>
         </View>
         <View >
