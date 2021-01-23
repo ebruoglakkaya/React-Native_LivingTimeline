@@ -1,4 +1,4 @@
-import React ,{useState,useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {SafeAreaView, Text, FlatList} from 'react-native';
 import auth from '@react-native-firebase/auth';
 import database from '@react-native-firebase/database';
@@ -10,40 +10,41 @@ const temp_data = [
   {id: 0, text: 'Egemenlik kayıtsız şartsız milletindir.'},
   {id: 1, text: 'Mertkaan yakışıklı olduğunu söylüyor.'},
   {id: 2, text: 'Berkay geldi. Mertkaanı onaylıyor.'},
-  ];
+];
 
 function Timeline() {
+  const [timelineArray, setTimelineArray] = useState([]);
 
-  const [timelineArray,setTimelineArray]=useState([]);
-
-  useEffect(()=> {
-    database().ref(`${auth().currentUser.uid}`)
-    .on('value', (snapshot) => {
-      const data = snapshot.val();
-
-      if (!data) {
-        return;
-      }
-      setTimelineArray(Object.values(data));
-    });
-
-  },[])
-
-  const  renderTimeline=({item})=><TimelineCart item={item}/>
-  function addChat(chat){
+  useEffect(() => {
     database()
       .ref(`${auth().currentUser.uid}`)
-      .push({id: Math.random(), text: chat});
+      .on('value', (snapshot) => {
+        const data = snapshot.val();
+
+        if (!data) {
+          return;
+        }
+        setTodoArray(Object.values(data));
+      });
+  }, []);
+
+  const renderTimeline = ({item}) => <TimelineCart item={item} />;
+
+  function addChat(todo) {
+    //https://rnfirebase.io/database/usage#writing-data
+    database()
+      .ref(`${auth().currentUser.uid}`)
+      .push({id: Math.random(), text: todo});
   }
 
   return (
-    <SafeAreaView style={{flex:1}}>
-       <FlatList 
+    <SafeAreaView style={{flex: 1}}>
+      <FlatList
         data={timelineArray}
         renderItem={renderTimeline}
         keyExtractor={(item, index) => index.toString()}
       />
-      <ChatInput onSend={addChat}/>
+      <ChatInput onSend={addChat} />
     </SafeAreaView>
   );
 }
