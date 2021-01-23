@@ -42,7 +42,7 @@ function Signup({navigation}) {
             style={signup_styles.logo}
             name="all-inclusive"
             size={150}
-            color={'#3355dd'}
+            color={'#00838f'}
           />
         </View>
 

@@ -19,7 +19,7 @@ function Login({navigation}) {
             style={login_styles.logo}
             name="all-inclusive"
             size={150}
-            color={'#3355dd'}
+            color={'#00838f'}
           />
         </View>
 

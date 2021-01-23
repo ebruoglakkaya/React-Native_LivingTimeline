@@ -8,7 +8,7 @@ const login_styles = StyleSheet.create({
     margin: 5,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: '#ddd',
+    backgroundColor: '#f1f8e9',
   },
   logoContainer: {
     flex: 1,
@@ -47,7 +47,7 @@ const signup_styles = StyleSheet.create({
     margin: 5,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: '#ddd',
+    backgroundColor: '#f1f8e9',
   },
   logoContainer: {
     flex: 1,
