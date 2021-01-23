@@ -24,7 +24,7 @@ function Timeline() {
         if (!data) {
           return;
         }
-        setTodoArray(Object.values(data));
+        setTimelineArray(Object.values(data));
       });
   }, []);
 
