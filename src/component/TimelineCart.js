@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import auth from '@react-native-firebase/auth';
+
 
 import {timeline_styles} from '../styles/component_styles';
 
@@ -24,7 +26,7 @@ export  function TimelineCart({item}) {
             <Text >{item.text}</Text>
             <View style={timeline_styles.favicon}>
             <Icon 
-            name="all-inclusive"
+            name="content-save"
             size={20}
             color={'white'}
           />

@@ -1,6 +1,26 @@
 import React from 'react'
 import {StyleSheet} from 'react-native'
 
+
+
+const chat_styles=StyleSheet.create({
+    container:{
+        backgroundColor:'#00838f',
+        paddingVertical:15,
+        alignItems:'flex-start',
+        justifyContent:'space-between',
+        flexDirection:'row',
+        marginHorizontal:25,
+        borderRadius:5,
+        padding:10,
+
+    },
+    text:{
+        color:'white',
+    },
+  
+});
+
 const timeline_styles=StyleSheet.create({
     container:{
         margin:5,
@@ -57,4 +77,4 @@ const timeline_styles=StyleSheet.create({
 
 
 });
-export {timeline_styles};
+export {timeline_styles,chat_styles};
