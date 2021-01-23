@@ -37,6 +37,7 @@ function Login({navigation}) {
 
         <View style={login_styles.eventContainer}>
           <TextInput
+            keyboardType="email-address"
             autoCapitalize="none"
             style={login_styles.input}
             placeholder="E-posta adresinizi giriniz"
@@ -45,6 +46,7 @@ function Login({navigation}) {
 
           <TextInput
             style={login_styles.input}
+            secureTextEntry={true}
             placeholder="Şifrenizi giriniz"
             onChangeText={(value) => setPassword(value)}
           />

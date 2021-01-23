@@ -49,18 +49,22 @@ function Signup({navigation}) {
         <View style={signup_styles.eventContainer}>
           <TextInput
             style={signup_styles.input}
+            keyboardType="email-address"
+            autoCapitalize="none"
             onChangeText={(val) => setEmail(val)}
             placeholder="E-posta adresinizi giriniz"
           />
 
           <TextInput
             style={signup_styles.input}
+            secureTextEntry={true}
             onChangeText={(val) => setPassword(val)}
             placeholder="Şifrenizi giriniz"
           />
 
           <TextInput
             style={signup_styles.input}
+            secureTextEntry={true}
             onChangeText={(val) => setPasswordRepeat(val)}
             placeholder="Şifrenizi tekrar giriniz"
           />
