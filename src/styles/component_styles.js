@@ -43,7 +43,18 @@ const timeline_styles=StyleSheet.create({
     date:{
         color:'white',
         paddingRight:20,
-    }
+    },
+    adfavoricontainer:{
+       justifyContent:'space-between',
+       flexDirection:'row',
+       
+
+    },
+    favicon:{
+        backgroundColor:'#00838f',
+        padding:2,
+        borderRadius:50,
+    },
 
 
 });

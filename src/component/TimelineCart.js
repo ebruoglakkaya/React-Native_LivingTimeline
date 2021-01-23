@@ -20,13 +20,15 @@ export  function TimelineCart({item}) {
             <Text style={timeline_styles.date}>Tarih</Text>
             </View>
         </View>
-        <View >
-            <Text>{item.text}</Text>
-            <Icon
+        <View style={timeline_styles.adfavoricontainer}>
+            <Text >{item.text}</Text>
+            <View style={timeline_styles.favicon}>
+            <Icon 
             name="all-inclusive"
             size={20}
-            color={'#00838f'}
+            color={'white'}
           />
+          </View>
         </View>
         </View>
     );
