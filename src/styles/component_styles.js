@@ -47,7 +47,6 @@ const timeline_styles=StyleSheet.create({
     adfavoricontainer:{
        justifyContent:'space-between',
        flexDirection:'row',
-       
 
     },
     favicon:{
