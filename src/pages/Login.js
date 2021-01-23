@@ -8,13 +8,19 @@ import {
   View,
 } from 'react-native';
 import {login_styles} from '../styles/pages_styles';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function Login({navigation}) {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <View style={login_styles.container}>
         <View style={login_styles.logoContainer}>
-          <Text style={login_styles.logo}>Login</Text>
+          <Icon
+            style={login_styles.logo}
+            name="all-inclusive"
+            size={150}
+            color={'#3355dd'}
+          />
         </View>
 
         <View style={login_styles.eventContainer}>
