@@ -17,14 +17,16 @@ function Timeline() {
 
   useEffect(() => {
     database()
-    .ref(`/timeline`)
+      .ref(`/timeline`)
       .on('value', (snapshot) => {
         const data = snapshot.val();
 
         if (!data) {
           return;
         }
-        setTimelineArray(Object.values(data).sort((a, b) => (a.time < b.time) ? 1 : -1));
+        setTimelineArray(
+          Object.values(data).sort((a, b) => (a.time < b.time ? 1 : -1)),
+        );
       });
   }, []);
 
@@ -32,9 +34,13 @@ function Timeline() {
 
   function addChat(chat) {
     if (!chat) return;
-    database()
-      .ref(`/timeline`)
-      .push({id: Math.random(),email:auth().currentUser.email, text: chat , time:new Date().getTime()});
+    database().ref(`/timeline`).push({
+      id: Math.random(),
+      email: auth().currentUser.email,
+      text: chat,
+      time: new Date().getTime(),
+      date: new Date().getDay(),
+    });
   }
 
   return (
