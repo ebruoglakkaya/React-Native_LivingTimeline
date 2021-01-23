@@ -30,7 +30,7 @@ function Timeline() {
   },[])
 
   const  renderTimeline=({item})=><TimelineCart item={item}/>
-  function addChat(Chat){
+  function addChat(chat){
     database()
       .ref(`${auth().currentUser.uid}`)
       .push({id: Math.random(), text: chat});
