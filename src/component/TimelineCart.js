@@ -16,7 +16,7 @@ export  function TimelineCart({item}) {
             size={20}
             color={'white'}
           />
-          <Text style={timeline_styles.mail}>E-Mail</Text>
+          <Text style={timeline_styles.mail}>{item.email}</Text>
             </View>
             <View style={timeline_styles.header_right}>
             <Text style={timeline_styles.date}>Tarih</Text>

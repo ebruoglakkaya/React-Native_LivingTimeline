@@ -34,7 +34,7 @@ function Timeline() {
     if (!chat) return;
     database()
       .ref(`/timeline`)
-      .push({id: Math.random(), text: chat , time:new Date().getTime()});
+      .push({id: Math.random(),email:auth().currentUser.email, text: chat , time:new Date().getTime()});
   }
 
   return (
