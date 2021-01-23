@@ -23,6 +23,9 @@ const timeline_styles = StyleSheet.create({
   container: {
     margin: 5,
     padding: 10,
+    borderBottomWidth: 2,
+    borderColor: '#546e7a',
+    borderRadius: 5,
   },
   header: {
     flexDirection: 'row',
@@ -49,12 +52,14 @@ const timeline_styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-end',
   },
-  text_container: {},
+  text: {
+    color: '#546e7a',
+  },
   date: {
     color: 'white',
     paddingRight: 20,
   },
-  adfavoricontainer: {
+  addFavContainer: {
     justifyContent: 'space-between',
     flexDirection: 'row',
   },

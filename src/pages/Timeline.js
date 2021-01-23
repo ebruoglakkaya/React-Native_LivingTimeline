@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {SafeAreaView, Text, FlatList} from 'react-native';
 import auth from '@react-native-firebase/auth';
 import database from '@react-native-firebase/database';
+import moment from 'moment';
 
 import {TimelineCart} from '../component/TimelineCart';
 import {ChatInput} from '../component';
@@ -39,7 +40,7 @@ function Timeline() {
       email: auth().currentUser.email,
       text: chat,
       time: new Date().getTime(),
-      date: new Date().getDay(),
+      date: auth().currentUser.Date,
     });
   }
 
