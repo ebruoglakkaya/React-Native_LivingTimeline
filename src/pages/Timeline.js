@@ -5,7 +5,7 @@ import database from '@react-native-firebase/database';
 import moment from 'moment';
 
 import {TimelineCart} from '../component/TimelineCart';
-import {ChatInput} from '../component';
+import {ChatInput, TimelineHeader} from '../component';
 
 // const temp_data = [
 //   {id: 0, text: 'Egemenlik kayıtsız şartsız milletindir.'},
@@ -47,6 +47,7 @@ function Timeline() {
   return (
     <SafeAreaView style={{flex: 1}}>
       <FlatList
+        ListHeaderComponent={<TimelineHeader />}
         data={timelineArray}
         renderItem={renderTimeline}
         keyExtractor={(item, index) => index.toString()}

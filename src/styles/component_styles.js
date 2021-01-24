@@ -125,16 +125,59 @@ const favorite_styles = StyleSheet.create({
 });
 
 const favorite_header_styles = StyleSheet.create({
-  container: {
+  linearGradient: {
     flex: 1,
-
-    padding: 10,
-    backgroundColor: '#00838f',
+    flexDirection: 'row',
+    paddingVertical: 10,
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   icon: {
     alignItems: 'flex-end',
     paddingRight: 10,
   },
+  logoContainer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingLeft: 10,
+  },
+
+  text: {
+    color: 'white',
+    paddingLeft: 10,
+    //alignSelf: 'flex-start',
+    fontSize: 10,
+    fontWeight: 'bold',
+  },
 });
 
-export {timeline_styles, chat_styles, favorite_styles, favorite_header_styles};
+const timeline_header_styles = StyleSheet.create({
+  linearGradient: {
+    flex: 1,
+    flexDirection: 'row',
+    paddingVertical: 10,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  logoContainer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingLeft: 10,
+  },
+
+  text: {
+    color: 'white',
+    paddingLeft: 10,
+    //alignSelf: 'flex-start',
+    fontSize: 10,
+    fontWeight: 'bold',
+  },
+});
+
+export {
+  timeline_styles,
+  chat_styles,
+  favorite_styles,
+  favorite_header_styles,
+  timeline_header_styles,
+};
