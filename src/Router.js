@@ -33,7 +33,7 @@ function Router() {
     <NavigationContainer>
       <Stack.Navigator
         headerMode={false}
-        initialRouteName={hasSession ? 'TimelineTab' : 'LoginStack'}>
+        initialRouteName={hasSession ? 'Timeline' : 'LoginStack'}>
         <Stack.Screen name="LoginStack" component={LoginStack} />
         <Stack.Screen name="Timeline" component={TimelineTab} />
       </Stack.Navigator>
