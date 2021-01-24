@@ -9,7 +9,7 @@ function Favorites() {
 
   useEffect(() => {
     database()
-      .ref(`/favorites/`+auth().currentUser.uid)
+      .ref(`/favorites/` + auth().currentUser.uid)
       .on('value', (snapshot) => {
         const data = snapshot.val();
 
@@ -17,7 +17,7 @@ function Favorites() {
           return;
         }
         setFavoriteArray(
-          Object.values(data).sort((a, b) => (a.time < b.time ? 1 : -1)),
+          Object.values(data).sort((a, b) => (a.time < b.time ? 1 : -1))
         );
       });
   }, []);
@@ -27,9 +27,10 @@ function Favorites() {
   return (
     <SafeAreaView>
       <FlatList
+        keyExtractor={(_, index) => index.toString()}
         data={favoriteArray}
         renderItem={renderFavorite}
-        keyExtractor={(item, index) => index.toString()}
+       
       />
       <FavoriteCart />
     </SafeAreaView>

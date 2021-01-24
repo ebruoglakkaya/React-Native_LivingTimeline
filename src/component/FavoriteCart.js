@@ -11,10 +11,8 @@ export function FavoriteCart({item}) {
 
   return (
     <View>
-      <View>
-       {/* <Text>{item.text}</Text>
-        <Text>{item.time}</Text> */}
-      </View>
+        <Text>{item.text}</Text>
+        <Text>{item.time}</Text>
     </View>
   );
 }
