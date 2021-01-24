@@ -1,18 +1,26 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import auth from '@react-native-firebase/auth';
-import database from '@react-native-firebase/database';
 
-
+import {favorite_styles} from '../styles/component_styles';
 
 export function FavoriteCart({item}) {
- console.log(item);
+  console.log(item);
 
   return (
-    <View>
-        <Text>{item.text}</Text>
-        <Text>{item.time}</Text>
+    <View style={favorite_styles.container}>
+      <View style={favorite_styles.header}>
+        <View style={favorite_styles.header_left}>
+          <Icon name="all-inclusive" size={20} color={'white'} />
+          <Text style={favorite_styles.mail}>{item.email.split('@')[0]}</Text>
+        </View>
+        <View style={favorite_styles.header_right}>
+          <Text style={favorite_styles.date}>{item.time}</Text>
+        </View>
+      </View>
+      <View style={favorite_styles.addFavContainer}>
+        <Text style={favorite_styles.text}>{item.text}</Text>
+      </View>
     </View>
   );
 }
