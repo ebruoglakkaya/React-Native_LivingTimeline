@@ -1,10 +1,9 @@
-import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 
 const chat_styles = StyleSheet.create({
   container: {
     backgroundColor: '#00838f',
-    padding: 10,
+    padding: 5,
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
@@ -12,7 +11,7 @@ const chat_styles = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 5,
     position: 'relative',
-    // padding: Platform.OS === 'android' ? '-10' : '10',
+    //padding: Platform.OS === 'android' ? '-10' : '10',
   },
   text: {
     color: 'white',
@@ -35,6 +34,8 @@ const timeline_styles = StyleSheet.create({
     backgroundColor: '#00838f',
     paddingVertical: 10,
     paddingHorizontal: 5,
+    borderWidth: 1,
+    borderColor: '#ffaa00',
     borderRadius: 5,
     alignItems: 'center',
   },
