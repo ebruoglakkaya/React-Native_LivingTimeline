@@ -12,7 +12,6 @@ export function TimelineCart({item}) {
         <View style={timeline_styles.header_left}>
           <Icon name="all-inclusive" size={20} color={'white'} />
           <Text style={timeline_styles.mail}>{item.email.split('@')[0]}</Text>
-          {console.log(item.email.split('@'))}
         </View>
         <View style={timeline_styles.header_right}>
           <Text style={timeline_styles.date}>{item.time}</Text>
