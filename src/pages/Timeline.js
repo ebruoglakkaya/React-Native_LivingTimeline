@@ -7,11 +7,11 @@ import moment from 'moment';
 import {TimelineCart} from '../component/TimelineCart';
 import {ChatInput} from '../component';
 
-const temp_data = [
-  {id: 0, text: 'Egemenlik kayıtsız şartsız milletindir.'},
-  {id: 1, text: 'Mertkaan yakışıklı olduğunu söylüyor.'},
-  {id: 2, text: 'Berkay geldi. Mertkaanı onaylıyor.'},
-];
+// const temp_data = [
+//   {id: 0, text: 'Egemenlik kayıtsız şartsız milletindir.'},
+//   {id: 1, text: 'Mertkaan yakışıklı olduğunu söylüyor.'},
+//   {id: 2, text: 'Berkay geldi. Mertkaanı onaylıyor.'},
+// ];
 
 function Timeline() {
   const [timelineArray, setTimelineArray] = useState([]);

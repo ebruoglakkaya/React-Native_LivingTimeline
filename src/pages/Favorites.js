@@ -1,5 +1,5 @@
-import React ,{useState,useEffect}from 'react';
-import {SafeAreaView, Text,FlatList} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {SafeAreaView, Text, FlatList} from 'react-native';
 import auth from '@react-native-firebase/auth';
 import database from '@react-native-firebase/database';
 import {FavoriteCart} from '../component';
@@ -17,7 +17,7 @@ function Favorites() {
           return;
         }
         setFavoriteArray(
-          Object.values(data).sort((a, b) => (a.time < b.time ? 1 : -1))
+          Object.values(data).sort((a, b) => (a.time < b.time ? 1 : -1)),
         );
       });
   }, []);
@@ -30,9 +30,7 @@ function Favorites() {
         keyExtractor={(_, index) => index.toString()}
         data={favoriteArray}
         renderItem={renderFavorite}
-       
       />
-      <FavoriteCart />
     </SafeAreaView>
   );
 }
