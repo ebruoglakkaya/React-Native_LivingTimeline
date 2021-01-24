@@ -20,7 +20,7 @@ const chat_styles = StyleSheet.create({
 
 const timeline_styles = StyleSheet.create({
   container: {
-    margin: 5,
+    marginBottom: 25,
     padding: 10,
     borderBottomWidth: 2,
     borderColor: '#546e7a',
@@ -73,11 +73,11 @@ const timeline_styles = StyleSheet.create({
 
 const favorite_styles = StyleSheet.create({
   container: {
-    margin: 5,
     padding: 10,
     borderBottomWidth: 2,
     borderColor: '#546e7a',
     borderRadius: 5,
+    marginBottom: 25,
   },
   header: {
     flexDirection: 'row',
@@ -124,4 +124,17 @@ const favorite_styles = StyleSheet.create({
   },
 });
 
-export {timeline_styles, chat_styles, favorite_styles};
+const favorite_header_styles = StyleSheet.create({
+  container: {
+    flex: 1,
+
+    padding: 10,
+    backgroundColor: '#00838f',
+  },
+  icon: {
+    alignItems: 'flex-end',
+    paddingRight: 10,
+  },
+});
+
+export {timeline_styles, chat_styles, favorite_styles, favorite_header_styles};

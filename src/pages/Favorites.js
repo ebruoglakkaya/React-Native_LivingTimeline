@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {SafeAreaView, Text, FlatList} from 'react-native';
 import auth from '@react-native-firebase/auth';
 import database from '@react-native-firebase/database';
-import {FavoriteCart} from '../component';
+import {FavoriteCart, FavoritesHeader} from '../component';
 
 function Favorites() {
   const [favoriteArray, setFavoriteArray] = useState([]);
@@ -27,6 +27,7 @@ function Favorites() {
   return (
     <SafeAreaView>
       <FlatList
+        ListHeaderComponent={<FavoritesHeader />}
         keyExtractor={(_, index) => index.toString()}
         data={favoriteArray}
         renderItem={renderFavorite}
