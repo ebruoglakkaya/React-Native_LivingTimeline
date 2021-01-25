@@ -35,15 +35,12 @@ function Timeline() {
 
   function addChat(chat) {
     if (!chat) return;
-    database()
-      .ref(`/timeline`)
-      .push({
-        id: Math.random(),
-        email: auth().currentUser.email,
-        text: chat,
-        time: new Date().getTime(),
-        postDate: moment.duration(new Date().getMinutes(true)).humanize(true),
-      });
+    database().ref(`/timeline`).push({
+      id: Math.random(),
+      email: auth().currentUser.email,
+      text: chat,
+      time: new Date().getTime(),
+    });
   }
 
   return (

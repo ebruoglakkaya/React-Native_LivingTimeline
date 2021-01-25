@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import auth from '@react-native-firebase/auth';
 import database from '@react-native-firebase/database';
 import moment from 'moment';
+import 'moment/locale/tr';
 
 //var now = moment.duration().humanize();
 
@@ -25,7 +26,9 @@ export function TimelineCart({item}) {
           <Text style={timeline_styles.mail}>{item.email.split('@')[0]}</Text>
         </View>
         <View style={timeline_styles.header_right}>
-          <Text style={timeline_styles.date}>{item.postDate}</Text>
+          <Text style={timeline_styles.date}>
+            {moment(item.time).fromNow()}
+          </Text>
         </View>
       </View>
       <View style={timeline_styles.addFavContainer}>
