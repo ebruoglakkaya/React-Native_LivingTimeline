@@ -6,7 +6,7 @@ platform :ios, '10.0'
 
 target 'week_5' do
   config = use_native_modules!
-
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
   use_react_native!(:path => config["reactNativePath"])
 
