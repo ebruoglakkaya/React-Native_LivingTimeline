@@ -35,13 +35,15 @@ function Timeline() {
 
   function addChat(chat) {
     if (!chat) return;
-    database().ref(`/timeline`).push({
-      id: Math.random(),
-      email: auth().currentUser.email,
-      text: chat,
-      time: new Date().getTime(),
-      date: auth().currentUser.Date,
-    });
+    database()
+      .ref(`/timeline`)
+      .push({
+        id: Math.random(),
+        email: auth().currentUser.email,
+        text: chat,
+        time: new Date().getTime(),
+        hale: moment.duration(new Date().getMinutes(true)).humanize(true),
+      });
   }
 
   return (
@@ -50,7 +52,7 @@ function Timeline() {
         ListHeaderComponent={<TimelineHeader />}
         data={timelineArray}
         renderItem={renderTimeline}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(_, index) => index.toString()}
       />
       <ChatInput onSend={addChat} />
     </SafeAreaView>
