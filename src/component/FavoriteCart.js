@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import moment from 'moment';
+import 'moment/locale/tr';
 
 import {favorite_styles} from '../styles/component_styles';
 
@@ -15,7 +17,9 @@ export function FavoriteCart({item}) {
           <Text style={favorite_styles.mail}>{item.email.split('@')[0]}</Text>
         </View>
         <View style={favorite_styles.header_right}>
-          <Text style={favorite_styles.date}>{item.time}</Text>
+          <Text style={favorite_styles.date}>
+            {moment(item.time).fromNow()}
+          </Text>
         </View>
       </View>
       <View style={favorite_styles.addFavContainer}>

@@ -40,7 +40,6 @@ function Timeline() {
       email: auth().currentUser.email,
       text: chat,
       time: new Date().getTime(),
-      date: auth().currentUser.Date,
     });
   }
 
@@ -50,7 +49,7 @@ function Timeline() {
         ListHeaderComponent={<TimelineHeader />}
         data={timelineArray}
         renderItem={renderTimeline}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(_, index) => index.toString()}
       />
       <ChatInput onSend={addChat} />
     </SafeAreaView>

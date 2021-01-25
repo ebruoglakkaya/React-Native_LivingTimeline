@@ -20,21 +20,23 @@ const chat_styles = StyleSheet.create({
 
 const timeline_styles = StyleSheet.create({
   container: {
-    marginBottom: 25,
+    marginVertical: 5,
     padding: 10,
-    borderBottomWidth: 2,
-    borderColor: '#546e7a',
+    borderWidth: 0.3,
+    borderColor: '#ffaa00',
     borderRadius: 5,
+    backgroundColor: 'white',
+    elevation: 10,
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     flex: 1,
-    marginVertical: 10,
+    marginVertical: 5,
     backgroundColor: '#00838f',
     paddingVertical: 10,
     paddingHorizontal: 5,
-    borderWidth: 1,
+    borderWidth: 0.3,
     borderColor: '#ffaa00',
     borderRadius: 5,
     alignItems: 'center',
@@ -63,6 +65,10 @@ const timeline_styles = StyleSheet.create({
   addFavContainer: {
     justifyContent: 'space-between',
     flexDirection: 'row',
+    backgroundColor: 'rgba(200, 200, 200, 0.4)',
+    paddingVertical: 10,
+    paddingHorizontal: 5,
+    borderRadius: 5,
   },
   favicon: {
     backgroundColor: '#00838f',
@@ -73,21 +79,23 @@ const timeline_styles = StyleSheet.create({
 
 const favorite_styles = StyleSheet.create({
   container: {
+    marginVertical: 5,
     padding: 10,
-    borderBottomWidth: 2,
-    borderColor: '#546e7a',
+    borderWidth: 0.3,
+    borderColor: '#ffaa00',
     borderRadius: 5,
-    marginBottom: 25,
+    backgroundColor: 'white',
+    elevation: 10,
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     flex: 1,
-    marginVertical: 10,
+    marginVertical: 5,
     backgroundColor: '#00838f',
     paddingVertical: 10,
     paddingHorizontal: 5,
-    borderWidth: 1,
+    borderWidth: 0.3,
     borderColor: '#ffaa00',
     borderRadius: 5,
     alignItems: 'center',
@@ -116,6 +124,10 @@ const favorite_styles = StyleSheet.create({
   addFavContainer: {
     justifyContent: 'space-between',
     flexDirection: 'row',
+    backgroundColor: 'rgba(200, 200, 200, 0.4)',
+    paddingVertical: 10,
+    paddingHorizontal: 5,
+    borderRadius: 5,
   },
   favicon: {
     backgroundColor: '#00838f',
