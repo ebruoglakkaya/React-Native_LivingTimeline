@@ -6,6 +6,12 @@ import auth from '@react-native-firebase/auth';
 import LinearGradient from 'react-native-linear-gradient';
 
 export function FavoritesHeader({navigation}) {
+  function logOut() {
+    auth()
+      .logOut.then(() => navigation.navigate('Login'))
+      .catch(({code, message}) => Alert.alert(code, message));
+  }
+
   return (
     <LinearGradient
       colors={['#006064', '#00838f', '#0097a7']}
@@ -15,11 +21,7 @@ export function FavoritesHeader({navigation}) {
         <Icon name="all-inclusive" size={20} color={'white'} />
       </View>
 
-      <TouchableOpacity
-        style={favorite_header_styles.icon}
-        /* onPress={() => auth().signOut(navigation.navigate('LoginStack'))}
-         */
-      >
+      <TouchableOpacity style={favorite_header_styles.icon} onPress={logOut}>
         <Icon name="exit-to-app" size={35} color={'white'} />
       </TouchableOpacity>
     </LinearGradient>
