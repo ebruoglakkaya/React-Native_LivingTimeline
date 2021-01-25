@@ -25,7 +25,7 @@ export function TimelineCart({item}) {
           <Text style={timeline_styles.mail}>{item.email.split('@')[0]}</Text>
         </View>
         <View style={timeline_styles.header_right}>
-          <Text style={timeline_styles.date}>{item.hale}</Text>
+          <Text style={timeline_styles.date}>{item.postDate}</Text>
         </View>
       </View>
       <View style={timeline_styles.addFavContainer}>

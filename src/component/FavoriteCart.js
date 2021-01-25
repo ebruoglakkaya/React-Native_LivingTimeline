@@ -15,7 +15,7 @@ export function FavoriteCart({item}) {
           <Text style={favorite_styles.mail}>{item.email.split('@')[0]}</Text>
         </View>
         <View style={favorite_styles.header_right}>
-          <Text style={favorite_styles.date}>{item.time}</Text>
+          <Text style={favorite_styles.date}>{item.postDate}</Text>
         </View>
       </View>
       <View style={favorite_styles.addFavContainer}>

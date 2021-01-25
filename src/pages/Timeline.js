@@ -42,7 +42,7 @@ function Timeline() {
         email: auth().currentUser.email,
         text: chat,
         time: new Date().getTime(),
-        hale: moment.duration(new Date().getMinutes(true)).humanize(true),
+        postDate: moment.duration(new Date().getMinutes(true)).humanize(true),
       });
   }
 
