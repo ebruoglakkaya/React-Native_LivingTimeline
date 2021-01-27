@@ -4,7 +4,7 @@ import auth from '@react-native-firebase/auth';
 import database from '@react-native-firebase/database';
 import {FavoriteCart, FavoritesHeader} from '../component';
 
-function Favorites() {
+function Favorites({navigation}) {
   const [favoriteArray, setFavoriteArray] = useState([]);
 
   useEffect(() => {
@@ -24,10 +24,17 @@ function Favorites() {
 
   const renderFavorite = ({item}) => <FavoriteCart item={item} />;
 
+  function logOut() {
+    auth()
+      .signOut()
+      .then(() => navigation.navigate('LoginStack'))
+      .catch(({code, message}) => Alert.alert(code, message));
+  }
+
   return (
     <SafeAreaView>
       <FlatList
-        ListHeaderComponent={<FavoritesHeader />}
+        ListHeaderComponent={<FavoritesHeader logOut={logOut} />}
         keyExtractor={(_, index) => index.toString()}
         data={favoriteArray}
         renderItem={renderFavorite}
