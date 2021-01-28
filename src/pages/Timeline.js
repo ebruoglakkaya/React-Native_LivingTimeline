@@ -15,7 +15,7 @@ import {ChatInput, TimelineHeader} from '../component';
 
 function Timeline() {
   const [timelineArray, setTimelineArray] = useState([]);
-console.log(moment())
+
   useEffect(() => {
     database()
       .ref(`/timeline`)
@@ -26,9 +26,7 @@ console.log(moment())
         if (!data) {
           return;
         }
-        setTimelineArray(
-          Object.values(data),
-        );
+        setTimelineArray(Object.values(data));
       });
   }, []);
 
@@ -40,7 +38,7 @@ console.log(moment())
       id: Math.random(),
       email: auth().currentUser.email,
       text: chat,
-      time: moment().format()
+      time: moment().format(),
     });
   }
 

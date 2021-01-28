@@ -1,13 +1,20 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import auth from '@react-native-firebase/auth';
+import database from '@react-native-firebase/database';
 import moment from 'moment';
 import 'moment/locale/tr';
+//import relativeTime from 'moment/'
 
 import {favorite_styles} from '../styles/component_styles';
 
 export function FavoriteCart({item}) {
-  console.log(item);
+  const user = auth().currentUser.uid;
+
+  function removeFavorites() {
+    database().ref(`/favorites/${user}/${item.favId}`).remove();
+  }
 
   return (
     <View style={favorite_styles.container}>
@@ -24,6 +31,11 @@ export function FavoriteCart({item}) {
       </View>
       <View style={favorite_styles.addFavContainer}>
         <Text style={favorite_styles.text}>{item.text}</Text>
+        <TouchableOpacity
+          onPress={removeFavorites}
+          style={favorite_styles.favicon}>
+          <Icon name="trash-can" size={20} color={'white'} />
+        </TouchableOpacity>
       </View>
     </View>
   );

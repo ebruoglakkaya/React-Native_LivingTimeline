@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import auth from '@react-native-firebase/auth';
 import database from '@react-native-firebase/database';
@@ -11,12 +11,18 @@ import 'moment/locale/tr';
 import {timeline_styles} from '../styles/component_styles';
 
 export function TimelineCart({item}) {
-  console.log(item.time)
-  function addFavorites(chat) {
-    if (!chat) return;
-    database()
-      .ref(`/favorites/` + auth().currentUser.uid)
-      .push(item);
+  function addFavorites() {
+    const newPostKey = database()
+      .ref()
+      .child(`/favorites/` + auth().currentUser.uid)
+      .push();
+    if (!item.favId) {
+      item.favId = newPostKey.key;
+      newPostKey.set(item);
+      Alert.alert('Kaydedildi!');
+    } else {
+      Alert.alert('Mesaj zaten kaydedilmiştir!');
+    }
   }
 
   return (
@@ -28,7 +34,7 @@ export function TimelineCart({item}) {
         </View>
         <View style={timeline_styles.header_right}>
           <Text style={timeline_styles.date}>
-            { moment(item.time).fromNow() }
+            {moment(item.time).fromNow()}
           </Text>
         </View>
       </View>
