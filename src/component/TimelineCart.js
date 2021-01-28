@@ -11,6 +11,7 @@ import 'moment/locale/tr';
 import {timeline_styles} from '../styles/component_styles';
 
 export function TimelineCart({item}) {
+  console.log(item.time)
   function addFavorites(chat) {
     if (!chat) return;
     database()
@@ -27,7 +28,7 @@ export function TimelineCart({item}) {
         </View>
         <View style={timeline_styles.header_right}>
           <Text style={timeline_styles.date}>
-            {moment(item.time).fromNow()}
+            { moment(item.time).fromNow() }
           </Text>
         </View>
       </View>

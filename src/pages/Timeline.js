@@ -15,10 +15,11 @@ import {ChatInput, TimelineHeader} from '../component';
 
 function Timeline() {
   const [timelineArray, setTimelineArray] = useState([]);
-
+console.log(moment())
   useEffect(() => {
     database()
       .ref(`/timeline`)
+      .orderByChild('time')
       .on('value', (snapshot) => {
         const data = snapshot.val();
 
@@ -26,7 +27,7 @@ function Timeline() {
           return;
         }
         setTimelineArray(
-          Object.values(data).sort((a, b) => (a.time < b.time ? 1 : -1)),
+          Object.values(data),
         );
       });
   }, []);
@@ -39,7 +40,7 @@ function Timeline() {
       id: Math.random(),
       email: auth().currentUser.email,
       text: chat,
-      time: new Date().getTime(),
+      time: moment().format()
     });
   }
 
