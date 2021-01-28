@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import auth from '@react-native-firebase/auth';
 import database from '@react-native-firebase/database';
@@ -13,7 +13,9 @@ export function FavoriteCart({item}) {
   const user = auth().currentUser.uid;
 
   function removeFavorites() {
+    console.log('silme');
     database().ref(`/favorites/${user}/${item.favId}`).remove();
+    Alert.alert('Kayıt silindi!');
   }
 
   return (

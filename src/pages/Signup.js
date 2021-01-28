@@ -20,7 +20,9 @@ function Signup({navigation}) {
   function CreateUser() {
     auth()
       .createUserWithEmailAndPassword(Email, Password)
-      .then(() => {})
+      .then(() =>
+        Alert.alert('Kayıt işleminiz gerçekleşmiştir. \n Ana sayfaya dönünüz'),
+      )
       .catch((error) => {
         if (error.code === 'auth/email-already-in-use') {
           Alert.alert('Bu email daha önce kullanılmıştır.');
