@@ -22,7 +22,7 @@ function Favorites({navigation}) {
       });
   }, []);
 
-  const renderFavorite = ({item}) => <FavoriteCart item={item} />;
+  const renderFavorite = ({item}) => <FavoriteCart reload={()=>setFavoriteArray([])} item={item} />;
 
   function logOut() {
     auth()

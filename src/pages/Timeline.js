@@ -30,7 +30,7 @@ function Timeline() {
       });
   }, []);
 
-  const renderTimeline = ({item}) => <TimelineCart item={item} />;
+  const renderTimeline = ({item}) => <TimelineCart  item={item} />;
 
   function addChat(chat) {
     if (!chat) return;

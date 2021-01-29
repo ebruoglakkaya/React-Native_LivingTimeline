@@ -9,10 +9,11 @@ import 'moment/locale/tr';
 
 import {favorite_styles} from '../styles/component_styles';
 
-export function FavoriteCart({item}) {
+export function FavoriteCart({item, reload}) {
   const user = auth().currentUser.uid;
 
   function removeFavorites() {
+    reload()
     console.log('silme');
     database().ref(`/favorites/${user}/${item.favId}`).remove();
     Alert.alert('Kayıt silindi!');
