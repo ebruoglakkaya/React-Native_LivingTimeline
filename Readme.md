@@ -7,9 +7,14 @@
 
 We are developers from **Kodluyoruz Bootcamp** and we are trying a few beauty things
 
-> Giriş Ekranı
-> Kayıt Ekranı
+<img sr>
+> 
+> 
 > Kayıt Olma İşlemi
 > Timeline Ekranı
 > Favorilere Ekleme
 > Favori Ekranı
+
+|              Giriş Ekranı               |               Kayıt Ekranı               |
+| :-------------------------------------: | :--------------------------------------: |
+| ![](<img src="screenshots/Login.png"/>) | ![](<img src="screenshots/SignUp.png"/>) |
