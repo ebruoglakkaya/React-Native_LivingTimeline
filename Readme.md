@@ -16,8 +16,8 @@ We are developers from **Kodluyoruz Bootcamp** and we are trying a few beauty th
 
 ### We are here for you!
 
-> [Ebru Oğlakkaya](https://github.com/ebruoglakkaya "Ebru Oğlakkaya's Github Page")
+> [Ebru Oğlakkaya's Github Page](https://github.com/ebruoglakkaya "Ebru Oğlakkaya's Github Page")
 
 <br />
 
-> [Mertkaan Erdem](https://github.com/mertkaanerdem "Mertkaan Erdem's Github Page")
+> [Mertkaan Erdem's Github Page](https://github.com/mertkaanerdem "Mertkaan Erdem's Github Page")
