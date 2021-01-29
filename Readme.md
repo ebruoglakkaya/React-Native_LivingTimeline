@@ -3,14 +3,8 @@
 ## This is homework for Kodluyoruz's React Native Bootcamp
 
 <br />
-<br />
 
 We are developers from **Kodluyoruz Bootcamp** and we are trying a few beauty things
-
-> Kayıt Olma İşlemi
-> Timeline Ekranı
-> Favorilere Ekleme
-> Favori Ekranı
 
 |            Giriş Ekranı             |              Kayıt Ekranı              |             Kayıt Olma İşlemi              |
 | :---------------------------------: | :------------------------------------: | :----------------------------------------: |
@@ -19,3 +13,11 @@ We are developers from **Kodluyoruz Bootcamp** and we are trying a few beauty th
 |          Timeline Ekranı           |          Favorilere Ekleme İşlemi          |           Favoriler Ekranı            |
 | :--------------------------------: | :----------------------------------------: | :-----------------------------------: |
 | ![Login](screenshots/Timeline.png) | ![Sign Up](screenshots/AddToFavorites.png) | ![Sign Up](screenshots/Favorites.png) |
+
+### We are here for you!
+
+> [Ebru Oğlakkaya](https://github.com/ebruoglakkaya "Ebru Oğlakkaya's Github Page")
+
+<br />
+
+> [Mertkaan Erdem](https://github.com/mertkaanerdem "Mertkaan Erdem's Github Page")
