@@ -15,6 +15,6 @@ We are developers from **Kodluyoruz Bootcamp** and we are trying a few beauty th
 > Favorilere Ekleme
 > Favori Ekranı
 
-|          Giriş Ekranı           |            Kayıt Ekranı            |
-| :-----------------------------: | :--------------------------------: |
-| ![Login](screenshots/Login.png) | ![Sign Up](screenshots/SignUp.png) |
+|            Giriş Ekranı             |              Kayıt Ekranı              |
+| :---------------------------------: | :------------------------------------: |
+| ![Login](screenshots/Login.png '1') | ![Sign Up](screenshots/SignUp.png '2') |
