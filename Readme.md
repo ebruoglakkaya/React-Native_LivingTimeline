@@ -7,7 +7,7 @@
 We are developers from **Kodluyoruz Bootcamp** and we are trying a few beauty things
 
 <br />
-<img src="screenshots/LivingTimeline.gif" alt="Living Timeline" width=460 >
+<img src="screenshots/LivingTimeline.gif" alt="Living Timeline" width=300 >
 <br />
 
 |            Giriş Ekranı             |              Kayıt Ekranı              |             Kayıt Olma İşlemi              |
