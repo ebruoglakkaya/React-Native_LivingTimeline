@@ -6,6 +6,10 @@
 
 We are developers from **Kodluyoruz Bootcamp** and we are trying a few beauty things
 
+<br />
+<img src="socialmedia/LivingTimeline.gif" alt="Living Timeline" width=460 >
+<br />
+
 |            Giriş Ekranı             |              Kayıt Ekranı              |             Kayıt Olma İşlemi              |
 | :---------------------------------: | :------------------------------------: | :----------------------------------------: |
 | ![Login](screenshots/Login.png '1') | ![Sign Up](screenshots/SignUp.png '2') | ![Sign Up](screenshots/SignUpDone.png '3') |
